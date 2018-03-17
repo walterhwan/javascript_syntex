@@ -110,7 +110,17 @@ Array(26).fill(1).map((x, y) => {
 # Array Methods
 
 ```javascript
-let arr = [1, 2, 3];
+let arr = [3, 1, 2];
 console.log(arr.includes(3)); // true
 console.log(arr.includes(4)); // false
+console.log(!arr.includes(4)); // true, ! sign works as negation in js as well
+// ruby: arr.include?(3)
+
+console.log(arr.sort()); // [1, 2, 3]
+// ruby: arr.sort()
+
+let arr2 = [3, 5, 1]
+[arr2[0], arr2[1]] = [arr2[1], arr2[0]];
+console.log(arr2) // [5, 3, 1]
+// ruby: arr2[0], arr2[1] = arr2[1], arr2[0]
 ```
