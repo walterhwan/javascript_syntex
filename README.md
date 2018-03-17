@@ -90,7 +90,6 @@ downloadAsync("http://example.com/file.txt",
 
 # String Methods
 
-Get ASCII codes
 ```javascript
 'a'.charCodeAt(0); // 97
 'z'.charCodeAt(0); // 122
@@ -99,11 +98,19 @@ String.fromCharCode(122);
 // ruby:
 ```
 
-Generate a array of string from a to z
+# Generate a array of string from a to z
 
 ```javascript
 let alphabet = Array(26).fill(1).map((val, idx) => {
   String.fromCharCode(val + idx + 96);
 });
 // ruby: ('a'..'z').to_a
+```
+
+# Array Methods
+
+```javascript
+let arr = [1, 2, 3];
+console.log(arr.includes(3)); // true
+console.log(arr.includes(4)); // false
 ```
