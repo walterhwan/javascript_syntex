@@ -43,7 +43,21 @@ let arr = [1, 2, 3, 4];
 for (let el of arr) {
   console.log(el));
 }
+```
+#### for loop with idx
 
+```javascript
+var myArray = [123, 15, 187, 32];
+
+myArray.forEach(function (value, i) {
+    console.log('%d: %s', i, value);
+});
+
+// Outputs:
+// 0: 123
+// 1: 15
+// 2: 187
+// 3: 32
 ```
 
 # Array Destructing
@@ -111,19 +125,25 @@ let alphabet = Array(26).fill(1).map((val, idx) => {
 
 # Array Methods
 
-`include`
+#### `include`
 ```javascript
 let arr = [1, 2, 3];
 console.log(arr.includes(3)); // true
 console.log(arr.includes(4)); // false
 ```
 
-`select` / `filter` method
+#### `select` / `filter` method
 ```javascript
 let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
   return val === idx;
-}); // [0, 2, 5]
-// ruby: [0, 2, 2, 4, 5, 5].select.each_with_index do |el, i|
+}); // => [0, 2, 5]
+// ruby:
+// [0, 2, 2, 4, 5, 5].select.each_with_index do |el, i|
 //  el == i
 // end
+```
+
+#### Find index of element `Array#indexOf`
+```javascript
+[1,2,3,4,5,6].indexOf(4); // => 3
 ```
