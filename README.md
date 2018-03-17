@@ -125,7 +125,7 @@ let alphabet = Array(26).fill(1).map((val, idx) => {
 
 # Array Methods
 
-#### `includes`
+#### Check if element is included in array `includes`
 ```javascript
 let arr = [3, 1, 2];
 console.log(arr.includes(3)); // true
@@ -134,21 +134,21 @@ console.log(!arr.includes(4)); // true, ! sign works as negation in js as well
 // ruby: arr.include?(3)
 ```
 
-#### `sort`
+#### Sort array `Array#sort`
 Default sort
 ```javascript
 console.log(arr.sort()); // [1, 2, 3]
 // ruby: arr.sort()
 ```
 
-#### Pass anonymous to sort
+Pass anonymous to sort
 ```javascript
 chars.sort((a, b) => {
   return a.charCodeAt(0) - b.charCodeAt(0);
 });
 ```
 
-#### `swapping` elements
+#### Swapping elements
 ```javascript
 let arr2 = [3, 5, 1]
 [arr2[0], arr2[1]] = [arr2[1], arr2[0]];
