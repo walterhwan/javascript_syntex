@@ -90,6 +90,15 @@ downloadAsync("http://example.com/file.txt",
 
 # String Methods
 
+Get ASCII codes
 ```javascript
 console.log('a'.charCodeAt(0)); // 97
 console.log('z'.charCodeAt(0)); // 122
+String.fromCharCode(97);
+String.fromCharCode(122);
+```
+
+Generate a array of string from a to z
+```javascript
+Array(26).fill(1).map((x, y) => String.fromCharCode(x + y + 96))
+```
