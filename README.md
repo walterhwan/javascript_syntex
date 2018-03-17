@@ -90,25 +90,28 @@ downloadAsync("http://example.com/file.txt",
 
 # String Methods
 
+#### ASCII code to/from string
 ```javascript
 'a'.charCodeAt(0); // 97
 'z'.charCodeAt(0); // 122
 String.fromCharCode(97);
 String.fromCharCode(122);
-// ruby:
+// ruby: 'a'.ord
+// ruby: 97.chr
 ```
 
-# Generate a array of string from a to z
+#### Generate (alphabet) a array of string from a to z
 
 ```javascript
-Array(26).fill(1).map((x, y) => {
-  String.fromCharCode(x + y + 96);
+let alphabet = Array(26).fill(1).map((val, idx) => {
+  return String.fromCharCode(val + idx + 96);
 });
 // ruby: ('a'..'z').to_a
 ```
 
 # Array Methods
 
+`include`
 ```javascript
 let arr = [3, 1, 2];
 console.log(arr.includes(3)); // true
@@ -123,4 +126,14 @@ let arr2 = [3, 5, 1]
 [arr2[0], arr2[1]] = [arr2[1], arr2[0]];
 console.log(arr2) // [5, 3, 1]
 // ruby: arr2[0], arr2[1] = arr2[1], arr2[0]
+```
+
+`select` / `filter` method
+```javascript
+let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
+  return val === idx;
+}); // [0, 2, 5]
+// ruby: [0, 2, 2, 4, 5, 5].select.each_with_index do |el, i|
+//  el == i
+// end
 ```
