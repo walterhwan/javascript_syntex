@@ -111,7 +111,7 @@ let alphabet = Array(26).fill(1).map((val, idx) => {
 
 # Array Methods
 
-`include`
+`includes`
 ```javascript
 let arr = [3, 1, 2];
 console.log(arr.includes(3)); // true
@@ -119,9 +119,11 @@ console.log(arr.includes(4)); // false
 console.log(!arr.includes(4)); // true, ! sign works as negation in js as well
 // ruby: arr.include?(3)
 
+`sort`
 console.log(arr.sort()); // [1, 2, 3]
 // ruby: arr.sort()
 
+`swapping` elements
 let arr2 = [3, 5, 1]
 [arr2[0], arr2[1]] = [arr2[1], arr2[0]];
 console.log(arr2) // [5, 3, 1]
