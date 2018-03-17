@@ -134,6 +134,14 @@ console.log(arr2) // [5, 3, 1]
 // ruby: arr2[0], arr2[1] = arr2[1], arr2[0]
 ```
 
+`Array.isArray` method
+```javascript
+console.log(Array.isArray([1, 2])) // true
+console.log(Array.isArray(3)); // false
+
+// ruby: [1, 2].is_a?(Array)
+```
+
 `select` / `filter` method
 ```javascript
 let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
