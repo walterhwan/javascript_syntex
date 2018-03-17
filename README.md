@@ -93,3 +93,12 @@ downloadAsync("http://example.com/file.txt",
 ```javascript
 console.log('a'.charCodeAt(0)); // 97
 console.log('z'.charCodeAt(0)); // 122
+```
+
+# Array Methods
+
+```javascript
+let arr = [1, 2, 3];
+console.log(arr.includes(3)); // true
+console.log(arr.includes(4)); // false
+```
