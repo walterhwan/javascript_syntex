@@ -102,8 +102,8 @@ String.fromCharCode(122);
 Generate a array of string from a to z
 
 ```javascript
-Array(26).fill(1).map((x, y) => {
-  String.fromCharCode(x + y + 96);
+let alphabet = Array(26).fill(1).map((val, idx) => {
+  String.fromCharCode(val + idx + 96);
 });
 // ruby: ('a'..'z').to_a
 ```
