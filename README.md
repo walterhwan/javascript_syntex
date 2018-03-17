@@ -91,8 +91,20 @@ downloadAsync("http://example.com/file.txt",
 # String Methods
 
 ```javascript
-console.log('a'.charCodeAt(0)); // 97
-console.log('z'.charCodeAt(0)); // 122
+'a'.charCodeAt(0); // 97
+'z'.charCodeAt(0); // 122
+String.fromCharCode(97);
+String.fromCharCode(122);
+// ruby:
+```
+
+# Generate a array of string from a to z
+
+```javascript
+Array(26).fill(1).map((x, y) => {
+  String.fromCharCode(x + y + 96);
+});
+// ruby: ('a'..'z').to_a
 ```
 
 # Array Methods
