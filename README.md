@@ -185,3 +185,10 @@ let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
 ```javascript
 [1,2,3,4,5,6].indexOf(4); // => 3
 ```
+
+#### Find min & max of an Array
+```javascript
+let a = [1, 5, 3, 23];
+let min = Math.min(...a); // 1
+let max = Math.max(...a); // 23
+```
