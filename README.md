@@ -43,6 +43,11 @@ let arr = [1, 2, 3, 4];
 for (let el of arr) {
   console.log(el));
 }
+
+// for of loop with index
+for (const [idx, el] of arr.entries()) {
+  console.log(el, idx));
+}
 ```
 #### for loop with idx
 
@@ -141,7 +146,7 @@ console.log(arr.sort()); // [1, 2, 3]
 // ruby: arr.sort()
 ```
 
-Pass anonymous to sort
+Pass anonymous function to sort
 ```javascript
 chars.sort((a, b) => {
   return a.charCodeAt(0) - b.charCodeAt(0);
