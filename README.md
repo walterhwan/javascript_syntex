@@ -1,7 +1,7 @@
 # `Array.from` (ES6+)
 Gett the rest of the input args
 
-```javascript
+```js
 function thisWorksToo() {
   let args = Array.from(arguments);  
   args instanceof Array; //=> true
@@ -10,7 +10,7 @@ function thisWorksToo() {
 ```
 
 # Grab the rest of args (ES6+)
-```javascript
+```js
 function restWay(firstArg, ...otherArgs) {
   console.log(`The first arg is ${firstArg}!`);
 
@@ -24,7 +24,7 @@ function restWay(firstArg, ...otherArgs) {
 
 # Spread Syntax (ES6+)
 
-```javascript
+```js
 function madLib(verb, pluralNoun1, pluralNoun2, place) {
   return `I like to ${verb} ${pluralNoun1} with ${pluralNoun2} by the ${place}.`;
 }
@@ -37,7 +37,7 @@ madLib(...words); // equivalent to 'madLib(words[0], words[1], words[2], words[3
 
 # For loop
 
-```javascript
+```js
 let arr = [1, 2, 3, 4];
 
 for (let el of arr) {
@@ -51,7 +51,7 @@ for (const [idx, el] of arr.entries()) {
 ```
 #### for loop with idx
 
-```javascript
+```js
 var myArray = [123, 15, 187, 32];
 
 myArray.forEach(function (value, i) {
@@ -67,13 +67,13 @@ myArray.forEach(function (value, i) {
 
 # Array Destructing
 
-```javascript
+```js
 const pos = [1, 2];
 const [x, y] = pos;
 ```
 
 # Get object types
-```javascript
+```js
 Object.prototype.toString.call('abc') // [object String]
 Object.prototype.toString.call(/abc/) // [object RegExp]
 Object.prototype.toString.call([1,2,3]) // [object Array]
@@ -82,7 +82,7 @@ Object.prototype.toString.call([1,2,3]) // [object Array]
 ```
 
 This should work for user defined classes. But not all of them. If the `Thiny.prototype` is set to something else, it will not work.
-```javascript
+```js
 function Cat(name) {
   this.name = name;
 }
@@ -95,7 +95,7 @@ console.log(cat.constructor === Cat); // true
 
 # Non-blocking event queue
 
-```javascript
+```js
 // bad, blocking
 var text = downloadSync("http://example.com/file.txt");
 console.log(text);
@@ -110,7 +110,7 @@ downloadAsync("http://example.com/file.txt",
 # String Methods
 
 #### ASCII code to/from string
-```javascript
+```js
 'a'.charCodeAt(0); // 97
 'z'.charCodeAt(0); // 122
 String.fromCharCode(97);
@@ -121,17 +121,76 @@ String.fromCharCode(122);
 
 #### Generate (alphabet) a array of string from a to z
 
-```javascript
+```js
 let alphabet = Array(26).fill(1).map((val, idx) => {
   return String.fromCharCode(val + idx + 96);
 });
 // ruby: ('a'..'z').to_a
 ```
 
+# Bind
+
+#### Different ways of writting myBind
+
+```js
+Function.prototype.myBind = function myBind(context, ...args) {
+  let fcn = this;
+  return function(...otherArgs) {
+    fcn.apply(context, args.concat(otherArgs));
+  };
+};
+```
+```js
+Function.prototype.myBind = function myBind(context, ...args) {
+  return (...otherArgs) => {
+    this.apply(context, args.concat(otherArgs));
+  };
+};
+```
+```js
+Function.prototype.myBind = function myBind(context, ...args) {
+  return (...otherArgs) => {
+    this.call(context, ...args.concat(otherArgs));
+  };
+};
+```
+
+# Curry
+
+#### Different ways of writting Curry
+```js
+Function.prototype.curry = function curry(numArgs) {
+  let args = [];
+  const _curry = (num) => {
+    args.push(num);
+    if (numArgs <= args.length) {
+      return this.apply(null, args);
+    } else {
+      return _curry;
+    }
+  };
+
+  return _curry;
+};
+```
+```js
+function curriedSum(numArgs) {
+  let args = [];
+  return function _currySum(num) {
+    args.push(num);
+    if (numArgs <= args.length) {
+      return args.reduce((acc, el) => acc + el);
+    } else {
+      return _currySum;
+    }
+  };
+}
+```
+
 # Array Methods
 
 #### Check if element is included in array `includes`
-```javascript
+```js
 let arr = [3, 1, 2];
 console.log(arr.includes(3)); // true
 console.log(arr.includes(4)); // false
@@ -141,20 +200,20 @@ console.log(!arr.includes(4)); // true, ! sign works as negation in js as well
 
 #### Sort array `Array#sort`
 Default sort
-```javascript
+```js
 console.log(arr.sort()); // [1, 2, 3]
 // ruby: arr.sort()
 ```
 
 Pass anonymous function to sort
-```javascript
+```js
 chars.sort((a, b) => {
   return a.charCodeAt(0) - b.charCodeAt(0);
 });
 ```
 
 #### Swapping elements
-```javascript
+```js
 let arr2 = [3, 5, 1]
 [arr2[0], arr2[1]] = [arr2[1], arr2[0]];
 console.log(arr2) // [5, 3, 1]
@@ -163,7 +222,7 @@ console.log(arr2) // [5, 3, 1]
 
 
 #### `Array.isArray` method
-```javascript
+```js
 console.log(Array.isArray([1, 2])) // true
 console.log(Array.isArray(3)); // false
 
@@ -171,7 +230,7 @@ console.log(Array.isArray(3)); // false
 ```
 
 #### `select` / `filter` method
-```javascript
+```js
 let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
   return val === idx;
 }); // => [0, 2, 5]
@@ -182,6 +241,6 @@ let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
 ```
 
 #### Find index of element `Array#indexOf`
-```javascript
+```js
 [1,2,3,4,5,6].indexOf(4); // => 3
 ```
