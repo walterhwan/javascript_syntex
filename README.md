@@ -136,21 +136,21 @@ let alphabet = Array(26).fill(1).map((val, idx) => {
 Function.prototype.myBind = function myBind(context, ...args) {
   let fcn = this;
   return function(...otherArgs) {
-    fcn.apply(context, args.concat(otherArgs));
+    return fcn.apply(context, args.concat(otherArgs));
   };
 };
 ```
 ```js
 Function.prototype.myBind = function myBind(context, ...args) {
   return (...otherArgs) => {
-    this.apply(context, args.concat(otherArgs));
+    return this.apply(context, args.concat(otherArgs));
   };
 };
 ```
 ```js
 Function.prototype.myBind = function myBind(context, ...args) {
   return (...otherArgs) => {
-    this.call(context, ...args.concat(otherArgs));
+    return this.call(context, ...args.concat(otherArgs));
   };
 };
 ```
