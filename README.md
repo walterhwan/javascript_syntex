@@ -1,11 +1,11 @@
 # `Array.from` (ES6+)
-Gett the rest of the input args
+Get the rest of the input args
 
 ```js
 function thisWorksToo() {
   let args = Array.from(arguments);  
   args instanceof Array; //=> true
-  args.forEach((arg)=> console.log(arg)); // This works too!
+  args.forEach((arg) => console.log(arg)); // This works too!
 }
 ```
 
@@ -41,12 +41,12 @@ madLib(...words); // equivalent to 'madLib(words[0], words[1], words[2], words[3
 let arr = [1, 2, 3, 4];
 
 for (let el of arr) {
-  console.log(el));
+  console.log(el);
 }
 
 // for of loop with index
 for (const [idx, el] of arr.entries()) {
-  console.log(el, idx));
+  console.log(el, idx);
 }
 ```
 #### for loop with idx
@@ -102,8 +102,8 @@ console.log(text);
 
 // Good, asynchronous and non-blocking
 // or "run-to-completion guarantee"
-downloadAsync("http://example.com/file.txt",
-  function(text) { console.log(text);
+downloadAsync("http://example.com/file.txt", function(text) {
+  console.log(text);
 });
 ```
 
@@ -157,7 +157,7 @@ Function.prototype.myBind = function myBind(context, ...args) {
 
 # Curry
 
-#### Different ways of writting Curry
+#### Different ways of writing Curry
 ```js
 Function.prototype.curry = function curry(numArgs) {
   let args = [];
@@ -188,6 +188,12 @@ function curriedSum(numArgs) {
 ```
 
 # Array Methods
+
+#### Fill the array with the same numbers
+```js
+let arr = new Array(10).fill(0);
+console.log(arr); // [0,0,0,0,0,0,0,0,0,0]
+```
 
 #### Check if element is included in array `includes`
 ```js
