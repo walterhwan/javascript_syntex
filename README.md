@@ -35,6 +35,12 @@ madLib(...words); // equivalent to 'madLib(words[0], words[1], words[2], words[3
 //=> "I like to eat socks with rabbits by the sea."
 ```
 
+# Random numbers
+
+```js
+Math.floor(Math.random() * n + 1); // return between 1 ~ n
+```
+
 # For loop
 
 ```js
@@ -256,4 +262,16 @@ let selected = [0, 2, 2, 4, 5, 5].filter((val, idx, self) => {
 let a = [1, 5, 3, 23];
 let min = Math.min(...a); // 1
 let max = Math.max(...a); // 23
+```
+
+#### You cannot define an array of arrays in this way
+
+```js
+let bucket = new Array(26).fill(new Array());
+// because the arrays inside will all be reference to the same array
+```
+
+You can do this instead
+```js
+Array.from(Array(26), () => new Array(3));
 ```
