@@ -18,4 +18,4 @@ function moveZero(arr) {
   return sorted;
 }
 
-console.log(moveZero([0, 1, 0, 3, 5, 0]));
+// console.log(moveZero([0, 1, 0, 3, 5, 0]));
