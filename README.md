@@ -264,6 +264,23 @@ let min = Math.min(...a); // 1
 let max = Math.max(...a); // 23
 ```
 
+#### Removing an element and/or insert element at the same time `splice`
+
+`splice` changes the contents of an array by removing existing elements and/or adding new elements. The return value will be an array that contains the deleted elements.
+
+`array.splice(start[, deleteCount[, item1[, item2[, ...]]]])`
+
+```js
+var months = ['Jan', 'March', 'April', 'June'];
+console.log(months.splice(1, 0, 'Feb'));
+console.log(months);
+// output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+let arr = [1,2,3,4,5,6,7];
+console.log(arr.splice(4, 1)); // [ 5 ]
+console.log(arr); // [ 1, 2, 3, 4, 6, 7 ]
+```
+
 #### You cannot define an array of arrays in this way
 
 ```js
