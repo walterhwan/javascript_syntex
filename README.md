@@ -264,7 +264,7 @@ let min = Math.min(...a); // 1
 let max = Math.max(...a); // 23
 ```
 
-#### Removing an element and/or insert element at the same time `splice`
+#### Removing elements and/or insert element at the same time `splice`
 
 `splice` changes the contents of an array by removing existing elements and/or adding new elements. The return value will be an array that contains the deleted elements.
 
@@ -296,4 +296,19 @@ let bucket = new Array(26).fill(new Array());
 You can do this instead
 ```js
 Array.from(Array(26), () => new Array(3));
+```
+
+### [Why you should use Object.is() in equality comparison][1]
+[1]: http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/
+
+```js
+0 == ' ' //true
+null == undefined //true
+[1] == true //true
+NaN === NaN //false
+
+Object.is(0 , ' '); //false
+Object.is(null, undefined); //false
+Object.is([1], true); //false
+Object.is(NaN, NaN); //true
 ```
