@@ -276,9 +276,14 @@ console.log(months.splice(1, 0, 'Feb'));
 console.log(months);
 // output: Array ['Jan', 'Feb', 'March', 'April', 'June']
 
-let arr = [1,2,3,4,5,6,7];
-console.log(arr.splice(4, 1)); // [ 5 ]
-console.log(arr); // [ 1, 2, 3, 4, 6, 7 ]
+let arr = [1,2,3];
+console.log(arr.splice(1, 1)); // [ 2 ]
+console.log(arr); // [ 1, 3 ]
+
+
+let arr = [1,2,3,4];
+console.log(arr.splice(1, 2, 5, 6)); // [ 2, 3 ]
+console.log(arr); // [ 1, 5, 6, 4 ]
 ```
 
 #### You cannot define an array of arrays in this way
