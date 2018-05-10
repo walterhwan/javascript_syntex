@@ -8,3 +8,8 @@ function subsets(arr) {
   });
   return prev.concat(current);
 }
+
+
+let a = [[1, 2], [3, 4]];
+
+console.log(a.flatten(1));
