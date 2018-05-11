@@ -30,18 +30,18 @@ class MaxStack {
   }
 }
 
-let stack = new MaxStack();
-stack.push(2);
-stack.push(1);
-stack.push(0);
-stack.push(10);
-stack.push(10);
-stack.push(5);
-stack.push(2);
+// let stack = new MaxStack();
+// stack.push(2);
+// stack.push(1);
+// stack.push(0);
+// stack.push(10);
+// stack.push(10);
+// stack.push(5);
+// stack.push(2);
+//
+// stack.pop();
+// stack.pop();
+// stack.pop();
+// stack.pop();
 
-stack.pop();
-// stack.pop();
-// stack.pop();
-// stack.pop();
-
-console.log(stack.max());
+// console.log(stack.max());
