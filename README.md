@@ -35,6 +35,8 @@ madLib(...words); // equivalent to 'madLib(words[0], words[1], words[2], words[3
 //=> "I like to eat socks with rabbits by the sea."
 ```
 
+<!-- # Add more (ES6+) -->
+
 # Random numbers
 
 ```js
