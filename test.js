@@ -13,8 +13,3 @@
 // let a = [[1, 2], [3, 4]];
 //
 // console.log(a.flatten(1));
-
-let a = {};
-a[1] = 2;
-
-console.log(Object.values(a));
