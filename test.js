@@ -9,7 +9,18 @@
 //   return prev.concat(current);
 // }
 //
-//
-// let a = [[1, 2], [3, 4]];
-//
-// console.log(a.flatten(1));
+// console.log(subsets([1,2,3]));
+
+var funScope = 1;
+let blockScope = 2;
+
+function foo() {
+  var funScope = 3;
+  blockScope = 4;
+  console.log(blockScope);
+}
+
+
+foo();
+
+console.log(blockScope);

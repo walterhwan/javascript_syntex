@@ -11,4 +11,4 @@ function tuckin(numTruck) {
   return miles;
 }
 
-console.log(tuckin(50));
+// console.log(tuckin(50));
