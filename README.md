@@ -303,6 +303,7 @@ Array.from(Array(26), () => new Array(3));
 ### [Why you should use Object.is() in equality comparison][1]
 [1]: http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/
 
+
 ```js
 0 == ' ' //true
 null == undefined //true
