@@ -292,7 +292,7 @@ console.log(arr); // [ 1, 5, 6, 4 ]
 
 ```js
 let bucket = new Array(26).fill(new Array());
-// because the arrays inside will all be reference to the same array
+// because the arrays inside will all be referenced to the same array
 ```
 
 You can do this instead
