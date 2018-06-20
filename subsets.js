@@ -8,3 +8,5 @@ function subsets(arr) {
   });
   return prev.concat(current);
 }
+
+console.log(subsets([1, 2, 3]));
