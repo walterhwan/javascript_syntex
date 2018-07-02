@@ -60,7 +60,7 @@ for (const [idx, el] of arr.entries()) {
 #### for loop with idx
 
 ```js
-var myArray = [123, 15, 187, 32];
+let myArray = [123, 15, 187, 32];
 
 myArray.forEach(function (value, i) {
     console.log('%d: %s', i, value);
@@ -71,6 +71,20 @@ myArray.forEach(function (value, i) {
 // 1: 15
 // 2: 187
 // 3: 32
+```
+
+#### for loop with break (some)
+```js
+let arr = [1, 2, 3, 4];
+
+arr.some(function (val, idx) {
+  if (val === 3) return true; // break loop using return true
+  console.log('%d: %s', idx, val);
+});
+// output:
+// 0: 1
+// 1: 2
+
 ```
 
 # Array Destructing
