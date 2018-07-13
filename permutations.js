@@ -17,4 +17,4 @@ function permutation(arr) {
   return result;
 }
 
-console.log(permutation([1,2,3]));
+console.log(permutation([1,2,3,4]));
