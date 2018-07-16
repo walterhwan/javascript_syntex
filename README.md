@@ -13,7 +13,6 @@ function thisWorksToo() {
 ```js
 function restWay(firstArg, ...otherArgs) {
   console.log(`The first arg is ${firstArg}!`);
-
   console.log(`The other args are:`);
 
   otherArgs.forEach((arg) => {
