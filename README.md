@@ -4,7 +4,7 @@ Get the rest of the input args
 ```js
 function thisWorksToo() {
   let args = Array.from(arguments);  
-  args instanceof Array; //=> true
+  console.log(args instanceof Array); //=> true
   args.forEach((arg) => console.log(arg)); // This works too!
 }
 ```
