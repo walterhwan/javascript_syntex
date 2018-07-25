@@ -39,7 +39,8 @@ madLib(...words); // equivalent to 'madLib(words[0], words[1], words[2], words[3
 # Random numbers
 
 ```js
-Math.floor(Math.random() * n + 1); // return between 1 ~ n
+Math.floor(Math.random() * n + 1);
+// return between 1 ~ n
 ```
 
 # For loop
