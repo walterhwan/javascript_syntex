@@ -39,6 +39,7 @@ var solve = function(board) {
     }
   }
 
+  console.log();
   for (let row of board) {
     console.log(row);
   }
