@@ -63,20 +63,20 @@ for (const [idx, el] of arr.entries()) {
   console.log(el, idx);
 }
 ```
-#### for loop with idx
+#### for loop with idx and original array
 
 ```js
 let myArray = [123, 15, 187, 32];
 
-myArray.forEach(function (value, i) {
-    console.log('%d: %s', i, value);
+myArray.forEach(function (value, i, array) {
+    console.log('%d: %s: %s', i, value, array);
 });
 
 // Outputs:
-// 0: 123
-// 1: 15
-// 2: 187
-// 3: 32
+// 0: 123: 123,15,187,32
+// 1: 15: 123,15,187,32
+// 2: 187: 123,15,187,32
+// 3: 32: 123,15,187,32
 ```
 
 #### for loop with break (some)

@@ -19,3 +19,8 @@ let nums = [-2,1,-3,4,-1,2,1,-5,4];
 // 6
 
 console.log(maxSubArray(nums));
+
+let myArray = [123, 15, 187, 32];
+myArray.forEach(function (value, i, array) {
+    console.log('%d: %s: %s', i, value, array);
+});
