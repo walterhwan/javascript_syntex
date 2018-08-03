@@ -83,7 +83,7 @@ myArray.forEach(function (value, i, array) {
 ```js
 let arr = [1, 2, 3, 4];
 
-arr.some(function (val, idx) {
+arr.some(function (val, idx, array) {
   if (val === 3) return true; // break loop using return true
   console.log('%d: %s', idx, val);
 });
@@ -239,11 +239,11 @@ console.log(arr.sort()); // [1, 2, 3]
 // ruby: arr.sort()
 ```
 
-Pass anonymous function to sort
+#### Pass anonymous function to sort
 ```js
-chars.sort((a, b) => {
-  return a.charCodeAt(0) - b.charCodeAt(0);
-});
+let arr = [-4, -1, 1, 5, 0];
+arr.sort((a, b) => a - b);
+console.log(arr);
 ```
 
 #### Swapping elements
