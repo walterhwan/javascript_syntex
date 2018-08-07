@@ -320,6 +320,25 @@ You can do this instead
 Array.from(Array(26), () => new Array(3));
 ```
 
+#### Define an 2d array of the same size and dimensions (every row has different size)
+```js
+let triangle = [
+  [2],
+  [3,4],
+  [6,5,7],
+  [4,1,8,3]
+];
+let array = Array.from(Array(triangle.length), (arr, i) => {
+  return Array(i + 1);
+});
+console.log(array);
+// output:
+// [ [ <1 empty item> ],
+//   [ <2 empty items> ],
+//   [ <3 empty items> ],
+//   [ <4 empty items> ] ]
+```
+
 ### [Why you should use Object.is() in equality comparison][1]
 [1]: http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/
 
