@@ -19,5 +19,3 @@ let nums = [-2,1,-3,4,-1,2,1,-5,4];
 // 6
 
 console.log(maxSubArray(nums));
-
-let arr = [1, 2, 3, 4];
