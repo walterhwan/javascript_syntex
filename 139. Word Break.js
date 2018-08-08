@@ -7,7 +7,7 @@ var wordBreak = function(s, wordDict) {
   if (wordDict.length === 0) return false;
   if (wordDict.length === 1) return s === wordDict[0];
 
-  let queue = [''];
+  let queue = [""];
   let memo = new Map();
 
   while (queue.length > 0) {
@@ -33,5 +33,6 @@ var wordBreak = function(s, wordDict) {
 // let s = "leetcode", wordDict = ["leet", "code"];
 // let s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"];
 // let s = "ab", wordDict = ["a", "b"];
-let s = "aaaaaaa", wordDict = ["aaaa", "aaa"];
+let s = "aaaaaaa",
+  wordDict = ["aaaa", "aaa"];
 console.log(wordBreak(s, wordDict));

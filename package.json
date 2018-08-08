@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/walterhwan/javascript_syntex#readme",
   "devDependencies": {
-    "babel-eslint": "^8.2.6"
+    "babel-eslint": "^8.2.6",
+    "prettier-eslint": "^8.8.2"
   }
 }
