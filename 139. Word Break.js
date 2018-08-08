@@ -11,7 +11,6 @@ var wordBreak = function(s, wordDict) {
   let memo = new Map();
 
   while (queue.length > 0) {
-    console.log(queue);
     const val = queue.shift();
 
     for (let word of wordDict) {
