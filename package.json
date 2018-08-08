@@ -1,0 +1,23 @@
+{
+  "name": "learn_java_script",
+  "version": "1.0.0",
+  "description": "Get the rest of the input args",
+  "main": "11. Container With Most Water.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walterhwan/javascript_syntex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walterhwan/javascript_syntex/issues"
+  },
+  "homepage": "https://github.com/walterhwan/javascript_syntex#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.6"
+  }
+}
