@@ -1,5 +1,3 @@
-
-
 var solve = function(board) {
   let queue = [];
 
@@ -19,10 +17,10 @@ var solve = function(board) {
   for (let pos of queue) {
     let i, j;
     [i, j] = pos;
-    checkBoarder(i+1, j, board, queue);
-    checkBoarder(i-1, j, board, queue);
-    checkBoarder(i, j+1, board, queue);
-    checkBoarder(i, j-1, board, queue);
+    checkBoarder(i + 1, j, board, queue);
+    checkBoarder(i - 1, j, board, queue);
+    checkBoarder(i, j + 1, board, queue);
+    checkBoarder(i, j - 1, board, queue);
   }
 
   for (let row of board) {
@@ -31,10 +29,10 @@ var solve = function(board) {
 
   for (let [i, row] of board.entries()) {
     for (let [j, el] of row.entries()) {
-      if (el === '1') {
-        board[i][j] = 'O';
-      } else if (el === 'O') {
-        board[i][j] = 'X';
+      if (el === "1") {
+        board[i][j] = "O";
+      } else if (el === "O") {
+        board[i][j] = "X";
       }
     }
   }
@@ -50,11 +48,11 @@ var checkBoarder = function(i, j, board, queue) {
     return;
   }
   // console.log(board[i][j]);
-  if (board[i][j] === 'O') {
-    board[i][j] = '1';
+  if (board[i][j] === "O") {
+    board[i][j] = "1";
     queue.push([i, j]);
   }
 };
 
-let board = [["X","O","X"],["O","X","O"],["X","O","X"]];
+let board = [["X", "O", "X"], ["O", "X", "O"], ["X", "O", "X"]];
 solve(board);

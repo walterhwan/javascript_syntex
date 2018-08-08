@@ -15,6 +15,8 @@ var wordBreak = function(s, wordDict) {
 
     for (let word of wordDict) {
       const searchWord = `${val}${word}`;
+      console.log("searchWord = %s", searchWord);
+
       const startsWith = s.indexOf(searchWord) === 0;
 
       if (searchWord === s) return true;
@@ -34,4 +36,5 @@ var wordBreak = function(s, wordDict) {
 // let s = "ab", wordDict = ["a", "b"];
 let s = "aaaaaaa",
   wordDict = ["aaaa", "aaa"];
+
 console.log(wordBreak(s, wordDict));
