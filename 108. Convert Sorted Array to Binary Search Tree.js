@@ -21,7 +21,6 @@ var sortedArrayToBST = function(nums) {
     let len = p2 - p1,
       midIdx = p1 + Math.floor(len / 2),
       root = new TreeNode(nums[midIdx]);
-    console.log("p1 = %s, p2 = %s, midIdx = %s", p1, p2, midIdx);
 
     root.left = helper(p1, midIdx - 1);
     root.right = helper(midIdx + 1, p2);
