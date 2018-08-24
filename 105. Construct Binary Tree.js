@@ -32,10 +32,10 @@ var buildTree = function(preorder, inorder) {
   return helper(0, preorder.length - 1, 0, inorder.length - 1);
 };
 
-let preorder = [3, 9, 20, 15, 7];
-let inorder = [9, 3, 15, 20, 7];
+// let preorder = [3, 9, 20, 15, 7];
+// let inorder = [9, 3, 15, 20, 7];
 
-// let preorder = [3, 9];
-// let inorder = [3, 9];
+let preorder = [3, 9];
+let inorder = [3, 9];
 
 console.log(buildTree(preorder, inorder));
