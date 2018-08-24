@@ -33,9 +33,9 @@ var wordBreak = function(s, wordDict) {
 // let s = "applepenapple", wordDict = ["apple", "pen"];
 // let s = "leetcode", wordDict = ["leet", "code"];
 // let s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"];
-let s = "ab",
-  wordDict = ["a", "b"];
-// let s = "aaaaaaa",
-//   wordDict = ["aaaa", "aaa"];
+// let s = "ab",
+//   wordDict = ["a", "b"];
+let s = "aaaaaaa",
+  wordDict = ["aaaa", "aaa"];
 
 console.log(wordBreak(s, wordDict));
