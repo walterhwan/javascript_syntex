@@ -259,10 +259,11 @@ console.log(!arr.includes(4)); // true, ! sign works as negation in js as well
 
 #### Sort array `Array#sort`
 
-Default sort
+Default sort. sort() can only sort string, not numbers. 
 
 ```js
-console.log(arr.sort()); // [1, 2, 3]
+let arr = ['b', 'a', 'c'];
+console.log(arr.sort()); // ['a', 'b', 'c']
 // ruby: arr.sort()
 ```
 
@@ -391,4 +392,20 @@ Object.is(0, " "); //false
 Object.is(null, undefined); //false
 Object.is([1], true); //false
 Object.is(NaN, NaN); //true
+```
+
+### Array#slice
+
+Copy array 
+
+```js
+let arr = [1,2,3];
+let arr2 = arr.slice();
+```
+
+Drop two elements 
+
+```js
+let arr = [1,2,3];
+console.log(arr.slice(2)); // [3]
 ```
