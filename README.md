@@ -336,6 +336,17 @@ console.log(arr); // [ 1, 3 ]
 let arr = [1, 2, 3, 4];
 console.log(arr.splice(1, 2, 5, 6)); // [ 2, 3 ]
 console.log(arr); // [ 1, 5, 6, 4 ]
+
+// remove element from array in-place
+var review = ['a', 'b', 'c', 'b', 'a'];
+
+review.forEach(function(item, index, object) {
+  if (item === 'a') {
+    object.splice(index, 1);
+  }
+});
+
+console.log(review) // [ 'b', 'c', 'b' ]
 ```
 
 #### You cannot define an array of arrays in this way
