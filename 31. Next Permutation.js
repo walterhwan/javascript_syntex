@@ -10,8 +10,6 @@ const reverseArray = (nums, start, end) => {
     for (let i = start, j = end; i <= mid; i++, j--) {
         swap(nums, i, j)
     }
-
-    return nums;
 }
 const nextPermutation = (nums) => {
     if (!nums || nums.length <= 1) return;
@@ -32,13 +30,8 @@ const nextPermutation = (nums) => {
         j++;
     }
 
-    console.log('i = %s', i);
-    console.log('j = %s', j);
     swap(nums, i, j);
-
     reverseArray(nums, i + 1, len - 1);
-    
-    return nums;
 };
 
 console.log(nextPermutation([1,4,3,2]));
