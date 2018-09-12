@@ -1,40 +1,26 @@
-var combinationSum = function(candidates, target) {
-    candidates.sort((a, b) => {
-        return a - b;
-    });
+const combinationSum = function(candidates, target) {
+    
+    if (!candidates || !candidates.length) { return []; }
+    
+    candidates.sort((a,b) => a - b);
+    
+    let sols = [];
 
-    let res = [],
-        len = candidates.length;
-
-    let calc = (arr, sum, lastIndex) => {
-        for (let i = lastIndex; i < len; i++) {
-            console.log('res = %s', res);
-            let num = candidates[i];
-            let newSum = sum + num;
-            if (newSum < target) {
-                calc(arr.concat(num), newSum, i);
-            } else if (newSum == target) {
-                res.push(arr.concat(num));
-                return;
+    const findCombo = (candIdx, subtotal, solutions) => {
+        for (let i = candIdx; i < candidates.length; i++) {
+            if ((subtotal + candidates[i]) === target) {
+                sols.push(solutions.concat(candidates[i]));
+            } else if ((subtotal + candidates[i]) < target) {
+                findCombo(i, subtotal + candidates[i], solutions.concat(candidates[i]));
             } else {
-                return;
+                break;
             }
         }
     };
 
-    for (let i = 0; i < len; i++) {
-        console.log('res = %s', res);
-        let num = candidates[i];
-        if (num > target) return res;
-        if (num == target) {
-            res.push([num]);
-        } else {
-            calc([num], num, i);
-        }
-    }
+    findCombo(0, 0, []);
 
-    return res;
-
+    return sols;
 };
 
 console.log(combinationSum([2,3,5], 8));
