@@ -23,3 +23,5 @@ var searchInsert = (arr, target, start = 0, end = arr.length - 1) => {
         return searchInsert(arr, target, mid + 1, end);
     }
 };
+
+console.log(searchInsert([1,2,4,7,9], 8));
