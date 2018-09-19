@@ -1,35 +1,4 @@
 var longestPalindrome = function(string) {
-  // let memory = {};
-  // let length = -1;
-  // let palPos = [0, 0];
-  // for (let i = 0; i < string.length; i++) {
-  //   for (let j = i; j < string.length; j++) {
-  //     let word = string.slice(i, j + 1);
-  //     // console.log("i, j = %s %s", i, j);
-  //     let len = j - i;
-  //     // console.log("word:%s", string.slice(i, j + 1));
-  //     if (memory[word] && string.charAt(i) === string.charAt(j - 1)) {
-  //       memory[word] = true;
-  //       if (length < len) {
-  //         length = len;
-  //         palPos = [i, j + 1];
-  //       }
-  //       continue;
-  //     }
-  //     if (isPal(i, j, string)) {
-  //       memory[word] = true;
-  //       if (length < len) {
-  //         length = len;
-  //         palPos = [i, j + 1];
-  //       }
-  //     } else {
-  //       memory[word] = false;
-  //     }
-  //   }
-  // }
-
-  // // console.log(memory);
-  // return string.slice(...palPos);
   if (string === null || string.length < 1) return "";
   let start = 0,
     end = 0;
