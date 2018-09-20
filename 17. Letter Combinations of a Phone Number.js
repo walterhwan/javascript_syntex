@@ -25,12 +25,10 @@ const letterCombinations = function(digits) {
       .reduce((acc, el) => acc.concat(el));
   };
 
-  return digits.split("").reduce(
-    (acc, digit) => {
-      return addCombo(acc, numPad[digit]);
-    },
-    [""]
-  );
+  return digits
+    .split("")
+    .map(char => numPad[char])
+    .reduce((acc, letters) => addCombo(acc, letters), [""]);
 };
 
 // console.log(addCombo(["a", "b", "c"], ["d", "e", "f"]));

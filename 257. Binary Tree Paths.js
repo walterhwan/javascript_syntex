@@ -24,13 +24,12 @@ const binaryTreePaths = function(root) {
       return [[node.val]];
     }
     if (node.left) {
-      let leftPath = findPath(node.left);
-      insertValToPaths(leftPath, node.val);
+      let leftPath = [node.val, ...findPath(node.left)];
+      // insertValToPaths(leftPath, node.val);
       paths.push(...leftPath);
     }
     if (node.right) {
-      let rightPath = findPath(node.right);
-      insertValToPaths(rightPath, node.val);
+      let rightPath = [node.val, ...findPath(node.right)];
       paths.push(...rightPath);
     }
 
