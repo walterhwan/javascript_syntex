@@ -3,7 +3,7 @@
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
+const strStr = function(haystack, needle) {
   if (!needle.length) return 0;
 
   for (let i = 0; i <= haystack.length - needle.length; i++) {
