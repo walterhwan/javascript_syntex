@@ -1,62 +1,46 @@
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
-}
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-var mergeTwoLists = function(l1, l2) {
-  let merged = null;
-  let node1 = l1;
-  let node2 = l2;
-  if (node1.val <= node2.val) {
-    merged = new ListNode(node1.val);
-    node1 = node1.next;
-  } else {
-    merged = new ListNode(node2.val);
-    node2 = node2.next;
-  }
-  let current = merged;
+const fs = require("fs");
 
-  while (node1 != null && node2 != null) {
-    console.log("node1 = %s", node1);
-    console.log("node2 = %s", node2);
-    if (node1.val <= node2.val) {
-      current.next = new ListNode(node1.val);
-      node1 = node1.next;
-    } else {
-      current.next = new ListNode(node2.val);
-      node2 = node2.next;
-    }
-    current = current.next;
-  }
-
-  return merged;
+const readJsonFile = filename => {
+  return new Promise((fulfill, reject) => {
+    fs.readFile(filename, "utf8", (err, res) => {
+      if (err) reject(err);
+      else fulfill(JSON.parse(res));
+    });
+  });
 };
 
-const printNode = node => {
-  if (node != null) {
-    console.log(node.val);
-    printNode(node.next);
-  }
-};
+readJsonFile("test.json").then(res => {
+  console.log(res);
+});
 
-let a = new ListNode(1);
-a.next = new ListNode(2);
-a.next.next = new ListNode(4);
+// const fs = require("fs");
 
-let b = new ListNode(1);
-b.next = new ListNode(3);
-b.next.next = new ListNode(4);
+// function readFile(filename, enc) {
+//   return new Promise(function(fulfill, reject) {
+//     fs.readFile(filename, enc, function(err, res) {
+//       if (err) reject(err);
+//       else fulfill(res);
+//     });
+//   });
+// }
 
-let node = mergeTwoLists(a, b);
-printNode(node);
+// function readJSONFile(filename) {
+//   return readFile(filename, "utf8").then(function(res) {
+//     return JSON.parse(res);
+//   });
+// }
+
+// console.log("1");
+
+// readJSONFile("test.json")
+//   .then(res => {
+//     for (let key in res) {
+//       console.log("Key: %s", key);
+//       console.log("Val: %s", res[key]);
+//     }
+//   })
+//   .catch(err => {
+//     console.warn(err);
+//   });
+
+// console.log("2");

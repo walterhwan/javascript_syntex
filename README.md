@@ -378,15 +378,27 @@ console.log(array);
 //   [ <4 empty items> ] ]
 ```
 
+### Object properties
+
+```js
+let hash = { a: 2, b: 3 };
+Object.keys(hash); // [ 'a', 'b' ]
+Object.values(hash); // [ 2, 3 ]
+
+Object.values(hash).reduce((acc, el) => acc + el, 0); // 5
+```
+
 ### [Why you should use Object.is() in equality comparison][1]
 
 [1]: http://www.jstips.co/en/javascript/why-you-should-use-Object.is()-in-equality-comparison/
 
+
+
 ```js
-0 == " "; //true
-(null == undefined[1]) == //true
-  true; //true
-NaN === NaN; //false
+console.log(0 == ' ') //true
+console.log(null == undefined) //true
+console.log([1] == true) //true
+console.log(NaN === NaN) //false
 
 Object.is(0, " "); //false
 Object.is(null, undefined); //false
