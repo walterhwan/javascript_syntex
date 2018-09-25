@@ -93,18 +93,18 @@ myArray.forEach(function(value, i, array) {
 // 3: 32: 123,15,187,32
 ```
 
-#### for loop with break (some)
+#### for loop with break and contiune (some)
 
 ```js
 let arr = [1, 2, 3, 4];
 
 arr.some(function(val, idx, array) {
+  if (val === 2) return false; // coutinue loop using return false
   if (val === 3) return true; // break loop using return true
   console.log("%d: %s", idx, val);
 });
 // output:
-// 0: 1
-// 1: 2
+// 1
 ```
 
 # Array Destructing
@@ -273,12 +273,17 @@ console.log(arr.sort()); // ['a', 'b', 'c']
 let arr = [-4, -1, 1, 5, 0];
 arr.sort((a, b) => a - b);
 console.log(arr);
+// [ -4, -1, 0, 1, 5 ]
+arr.sort((a, b) => b - a);
+console.log(arr);
+// [ 5, 1, 0, -1, -4 ]
 ```
 
 #### Swapping elements
 
 ```js
-let arr2 = ([3, 5, 1][(arr2[0], arr2[1])] = [arr2[1], arr2[0]]);
+let arr2 = [3, 5, 1];
+[arr2[0], arr2[1]] = [arr2[1], arr2[0]];
 console.log(arr2); // [5, 3, 1]
 // ruby: arr2[0], arr2[1] = arr2[1], arr2[0]
 ```
