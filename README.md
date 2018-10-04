@@ -346,7 +346,7 @@ console.log(arr); // [ 1, 5, 6, 4 ]
 // remove element from array in-place
 var review = ["a", "b", "c", "b", "a"];
 
-review.forEach(function(item, index, object) {
+review.forEach(function(item, index, array) {
   if (item === "a") {
     object.splice(index, 1);
   }

@@ -1,6 +1,5 @@
 /**
  * Definition for singly-linked list.
- *
  */
 function ListNode(val) {
   this.val = val;
@@ -10,6 +9,7 @@ function ListNode(val) {
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
+ * Add two numbers represented by linked-list
  */
 var addTwoNumbers = function(l1, l2, num = 0) {
   let val = l1.val + l2.val + num;

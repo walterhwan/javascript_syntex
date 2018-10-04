@@ -13,14 +13,3 @@
 // };
 
 // console.log(lowestCost(arr));
-
-// let arr = [1, 2, 3, 4];
-
-// for (let [val, idx] in arr.entries()) {
-//   console.log(`${val}: ${idx}`);
-// }
-
-var months = ["Jan", "March", "April", "June"];
-console.log(months.splice(1, 0, "Feb"));
-console.log(months);
-// output: Array ['Jan', 'Feb', 'March', 'April', 'June']

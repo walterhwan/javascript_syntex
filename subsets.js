@@ -3,11 +3,16 @@ function subsets(arr) {
   if (len === 0) return [[]];
 
   let prev = subsets(arr.slice(0, -1));
-  let el = arr[len - 1];
-  let current = prev.slice().map(subArr => {
-    return subArr.concat(el);
+  let current = prev.slice().map(el => {
+    return [...el, arr[len - 1]];
   });
-  return prev.concat(current);
+
+  return [...prev, ...current];
 }
 
+console.log(subsets([1]));
+console.log(subsets([1, 2]));
 console.log(subsets([1, 2, 3]));
+// [] => [[]]
+// [1] => [[], [1]]
+// [1, 2] => [[], [1], [2], [1, 2]]
