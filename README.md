@@ -96,14 +96,15 @@ myArray.forEach(function(value, i, array) {
 #### for loop with break and contiune (some)
 
 ```js
-let arr = [1, 2, 3, 4];
+let arr = [0, 1, 2, 3, 4];
 
 arr.some(function(val, idx, array) {
   if (val === 2) return false; // coutinue loop using return false
   if (val === 3) return true; // break loop using return true
-  console.log("%d: %s", idx, val);
+  console.log(val);
 });
 // output:
+// 0
 // 1
 ```
 
