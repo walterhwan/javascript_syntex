@@ -1,3 +1,13 @@
+# Deal with timezone in Date object
+```js
+const timestamp = 1583357799850
+console.log(new Date(timestamp).toLocaleString("en-US", { timeZone: 'America/Los_Angeles' }))
+// 3/4/2020, 1:36:39 PM
+console.log(new Date(timestamp).toLocaleString("en-US", { timeZone: 'America/Chicago' }))
+// 3/4/2020, 3:36:39 PM
+```
+
+
 # `Array.from` (ES6+)
 
 Get the rest of the input args
